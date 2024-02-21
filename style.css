@@ -223,6 +223,16 @@ h2 {
   align-items: center;
 }
 
+.hamburger {
+  display: none; /* Hide the hamburger button by default */
+  background-color: transparent;
+  border: none;
+  color: #ffffff;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 5px;
+}
+
 @media (max-width: 768px) {
   .header .container {
     flex-direction: column;
@@ -250,5 +260,41 @@ h2 {
 
   .signup button {
     margin-top: 20px;
+  }
+
+  /* Hamburger styles */
+  .navbar .menu {
+    display: none; /* Hide the menu items by default on mobile */
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #1f2833;
+    padding: 10px 0;
+    z-index: 1;
+    flex-direction: column;
+    border-top: 1px solid white;
+  }
+
+  .navbar .menu .show-menu {
+    display: block; /* Show the menu items when .show-menu class is present */
+  }
+
+  .navbar .menu li {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .navbar .menu li:last-child {
+    margin-bottom: 0;
+  }
+
+  .hamburger {
+    display: block; /* Display the hamburger button on mobile */
+  }
+
+  .features-menu > li {
+    display: none;
+    visibility: hidden;
   }
 }
